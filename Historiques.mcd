@@ -1,0 +1,34 @@
+user : idUser, nom, prenom, email, pseudo, pwd
+connexion, 11 user, 11 session : dateHeureCnx
+session : idSession
+
+::::
+choisirTheme, 11 user, 11 theme
+theme : idTheme, libelle
+contient, 0N theme, 11 question
+question : idQuestion, libelle, idRep1,idRep2,idRep3,idRep4
+appartient, 1N question, 11 reponse
+reponse : idReponse, libelle
+
+:::::
+stockerTheme, 11 theme, 1N historique
+stockerQuest, 1N question, 11 historique
+
+
+:::::::::
+stockerRep, 11 reponse, 11 historique
+
+::
+voirScore, 0N user, 11 score
+
+:
+score : idScore, resultat, nbRepTrue, nbRepFalse
+
+:
+stockerScore, 01 score, 0N historique
+
+:
+
+voirHistorique, 0N user, 11 historique
+historique : idHistorique, idHistoQ1,idHistoR1,idHistoQ2,idHistoR2,idHistoQ3,idHistoR3,idHistoQ4,idHistoR4,idHistoQ5,idHistoR5,idHistoQ6,idHistoR6,idHistoQ7,idHistoR7,idHistoQ8,idHistoR8,idHistoQ9,idHistoR9,idHistoQ10,idHistoR10
+

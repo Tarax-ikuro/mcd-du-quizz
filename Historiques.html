@@ -1,0 +1,98 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+</style>
+</head>
+<body>
+<div id='mld'>
+<div>
+  <span class='relation'>user</span> (
+    <span class='primary'>idUser</span>,
+    <span class='normal'>nom</span>,
+    <span class='normal'>prenom</span>,
+    <span class='normal'>email</span>,
+    <span class='normal'>pseudo</span>,
+    <span class='normal'>pwd</span>,
+    <span class='foreign'>idTheme</span>,
+    <span class='foreign'>idSession</span>,
+    <span class='normal'>dateHeureCnx</span>
+  )
+</div>
+<!--
+<div>
+  <span class='relation'>session</span> (
+    <span class='primary'>idSession</span>
+  )
+</div>
+-->
+<div>
+  <span class='relation'>theme</span> (
+    <span class='primary'>idTheme</span>,
+    <span class='normal'>libelle</span>,
+    <span class='foreign'>idHistorique</span>
+  )
+</div>
+<div>
+  <span class='relation'>question</span> (
+    <span class='primary'>idQuestion</span>,
+    <span class='normal'>libelle</span>,
+    <span class='normal'>idRep1</span>,
+    <span class='normal'>idRep2</span>,
+    <span class='normal'>idRep3</span>,
+    <span class='normal'>idRep4</span>,
+    <span class='foreign'>idTheme</span>
+  )
+</div>
+<div>
+  <span class='relation'>reponse</span> (
+    <span class='primary'>idReponse</span>,
+    <span class='normal'>libelle</span>,
+    <span class='foreign'>idQuestion</span>,
+    <span class='foreign'>idHistorique</span>
+  )
+</div>
+<div>
+  <span class='relation'>score</span> (
+    <span class='primary'>idScore</span>,
+    <span class='normal'>resultat</span>,
+    <span class='normal'>nbRepTrue</span>,
+    <span class='normal'>nbRepFalse</span>,
+    <span class='foreign'>idUser</span>,
+    <span class='foreign'>idHistorique</span>
+  )
+</div>
+<div>
+  <span class='relation'>historique</span> (
+    <span class='primary'>idHistorique</span>,
+    <span class='normal'>idHistoQ1</span>,
+    <span class='normal'>idHistoR1</span>,
+    <span class='normal'>idHistoQ2</span>,
+    <span class='normal'>idHistoR2</span>,
+    <span class='normal'>idHistoQ3</span>,
+    <span class='normal'>idHistoR3</span>,
+    <span class='normal'>idHistoQ4</span>,
+    <span class='normal'>idHistoR4</span>,
+    <span class='normal'>idHistoQ5</span>,
+    <span class='normal'>idHistoR5</span>,
+    <span class='normal'>idHistoQ6</span>,
+    <span class='normal'>idHistoR6</span>,
+    <span class='normal'>idHistoQ7</span>,
+    <span class='normal'>idHistoR7</span>,
+    <span class='normal'>idHistoQ8</span>,
+    <span class='normal'>idHistoR8</span>,
+    <span class='normal'>idHistoQ9</span>,
+    <span class='normal'>idHistoR9</span>,
+    <span class='normal'>idHistoQ10</span>,
+    <span class='normal'>idHistoR10</span>,
+    <span class='foreign'>idQuestion</span>,
+    <span class='foreign'>idUser</span>
+  )
+</div>
+</div>
+</body>
+</html>

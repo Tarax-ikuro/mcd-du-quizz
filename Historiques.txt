@@ -1,0 +1,7 @@
+user (_idUser_, nom, prenom, email, pseudo, pwd, #idTheme, #idSession, dateHeureCnx)
+session (_idSession_)
+theme (_idTheme_, libelle, #idHistorique)
+question (_idQuestion_, libelle, idRep1, idRep2, idRep3, idRep4, #idTheme)
+reponse (_idReponse_, libelle, #idQuestion, #idHistorique)
+score (_idScore_, resultat, nbRepTrue, nbRepFalse, #idUser, #idHistorique)
+historique (_idHistorique_, idHistoQ1, idHistoR1, idHistoQ2, idHistoR2, idHistoQ3, idHistoR3, idHistoQ4, idHistoR4, idHistoQ5, idHistoR5, idHistoQ6, idHistoR6, idHistoQ7, idHistoR7, idHistoQ8, idHistoR8, idHistoQ9, idHistoR9, idHistoQ10, idHistoR10, #idQuestion, #idUser)
